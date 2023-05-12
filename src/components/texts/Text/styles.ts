@@ -3,13 +3,16 @@ import styled, { css } from 'styled-components';
 
 // TYPES
 import { ITextProps } from './types';
-import { defaultTheme } from '../../styles/themes/default';
+
+// STYLES
+import { defaultTheme } from '../../../styles/themes/default';
 
 const variants = {
   primary: defaultTheme.pallet.primary,
   secondary: defaultTheme.pallet.secondary,
   black: defaultTheme.pallet.black.B500,
   gray: defaultTheme.pallet.gray.G200,
+  danger: defaultTheme.pallet.feedback.danger,
 };
 
 export const StyledText = styled(Slot)<ITextProps>`

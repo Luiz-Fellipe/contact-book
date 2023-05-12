@@ -1,5 +1,5 @@
 import { SlotProps } from '@radix-ui/react-slot';
-import { defaultTheme } from '../../styles/themes/default';
+import { defaultTheme } from '../../../styles/themes/default';
 
 /**
  * Props for the Text component
@@ -12,10 +12,10 @@ export interface ITextProps extends SlotProps {
   /**
    * Variant to use for the Text
    *
-   * @type {Pick<TextVariantsType, 'primary' | 'secondary' | 'gray' | 'black'>}
+   * @type {Pick<TextVariantsType, 'primary' | 'secondary' | 'gray' | 'black' | 'danger'>}
    * @memberof ITextProps
    */
-  color?: 'primary' | 'secondary' | 'gray' | 'black';
+  color?: 'primary' | 'secondary' | 'gray' | 'black' | 'danger';
   /**
    * sets a font-weight for the text
    *

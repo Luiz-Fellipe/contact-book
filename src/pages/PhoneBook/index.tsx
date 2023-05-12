@@ -1,7 +1,7 @@
 import React from 'react';
 
 // COMPONENTS
-import { Text } from '../../components/Text';
+import { Text } from '../../components/texts';
 
 // import { Container } from './styles';
 

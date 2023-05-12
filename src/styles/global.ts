@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -6,14 +6,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
   };
 
   body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     font-size: 16px;
-    background-color: ${({theme}) => theme.pallet.primary};
+    background-color: ${({ theme }) => theme.pallet.primary};
   };
 
   /* Chrome, Safari, Edge, Opera */
