@@ -1,7 +1,7 @@
 export const defaultTheme = {
   pallet: {
     primary: '#F9FBFB',
-    secondary: '#3D9FFF',
+    secondary: '#0A7EE3',
     white: {
       W50: '#ffffff',
       W100: '#FEFFFF',
@@ -9,7 +9,7 @@ export const defaultTheme = {
     },
     black: {
       B100: 'rgba(0,0,0,0.1)',
-      BW500: '#171717'
+      BW500: '#171717',
     },
     gray: {
       G50: '#F0F2F7',
@@ -21,7 +21,7 @@ export const defaultTheme = {
       danger: '#F32525',
       warning: '#FFD700',
       info: '#006DBA',
-    }
+    },
   },
   borderRadius: {
     btnRectangle: '4px',
@@ -65,7 +65,7 @@ export const defaultTheme = {
     '32': `2rem`,
   },
   boxShadow: {
-    main: '5px 6px 4px rgba(0, 0, 0, 0.25)',
+    main: '0px 10px 9px -10px rgba(0, 0, 0, 0.08)',
   },
   device: {
     sm: '(min-width: 576px)',

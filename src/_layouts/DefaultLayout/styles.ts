@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.main``;
+export const Wrapper = styled.main`
+  width: 100vw;
+`;
 
 export const Content = styled.section`
   max-width: 1200px;
