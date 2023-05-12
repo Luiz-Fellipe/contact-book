@@ -9,7 +9,7 @@ export const defaultTheme = {
     },
     black: {
       B100: 'rgba(0,0,0,0.1)',
-      BW500: '#171717',
+      B500: '#171717',
     },
     gray: {
       G50: '#F0F2F7',
