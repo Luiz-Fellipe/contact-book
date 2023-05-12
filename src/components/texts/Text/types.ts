@@ -1,5 +1,5 @@
 import { SlotProps } from '@radix-ui/react-slot';
-import { defaultTheme } from '../../../styles/themes/default';
+import { defaultTheme } from 'styles/themes/default';
 
 /**
  * Props for the Text component

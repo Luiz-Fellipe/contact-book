@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 //LAYOUTS
-import { DefaultLayout } from './_layouts/DefaultLayout';
+import { DefaultLayout } from '_layouts/DefaultLayout';
 
 // PAGES
-import PhoneBook from './pages/PhoneBook';
-import { ContactDetail } from './pages/ContactDetail';
+import PhoneBook from 'pages/PhoneBook';
+import { ContactDetail } from 'pages/ContactDetail';
 
 const router = createBrowserRouter([
   {

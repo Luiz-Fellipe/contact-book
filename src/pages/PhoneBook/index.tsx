@@ -1,9 +1,7 @@
 import React from 'react';
 
 // COMPONENTS
-import { Text } from '../../components/texts';
-
-// import { Container } from './styles';
+import { Text } from 'components/texts';
 
 const PhoneBook: React.FC = () => {
   return (

@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import { ITextProps } from './types';
 
 // STYLES
-import { defaultTheme } from '../../../styles/themes/default';
+import { defaultTheme } from 'styles/themes/default';
 
 const variants = {
   primary: defaultTheme.pallet.primary,

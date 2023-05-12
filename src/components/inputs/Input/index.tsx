@@ -8,7 +8,7 @@ import {
 
 // COMPONENTS
 import { WrapperInput } from './styles';
-import { Text } from '../../texts';
+import { Text } from 'components/texts';
 
 interface IInputProps
   extends React.DetailedHTMLProps<
