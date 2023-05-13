@@ -4,9 +4,14 @@ import { IButtonProps } from '.';
 
 type IButtonType = Pick<
   IButtonProps,
-  '$fontWeight' | '$fontSize' | 'loading' | 'variant' | 'full' | 'flexDirection'
+  | '$fontWeight'
+  | '$fontSize'
+  | 'loading'
+  | 'variant'
+  | '$full'
+  | '$flexDirection'
 > & {
-  hasGap: boolean;
+  $hasGap: boolean;
 };
 
 const primary = css`
@@ -76,15 +81,15 @@ const variants: Record<IButtonVariantsKeys, RuleSet<object>> = {
 };
 
 export const WrapperButton = styled.button<IButtonType>`
-  width: ${(props) => (props.full ? '100%' : 'fit-content')};
-  height: ${(props) => (props.full ? '100%' : 'fit-content')};
+  width: ${(props) => (props.$full ? '100%' : 'fit-content')};
+  height: ${(props) => (props.$full ? '100%' : 'fit-content')};
   min-height: 30px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ${(props) => (props.hasGap ? '0.5rem' : '0')};
-  flex-direction: ${({ flexDirection }) => flexDirection};
+  gap: ${(props) => (props.$hasGap ? '0.5rem' : '0')};
+  flex-direction: ${({ $flexDirection }) => $flexDirection};
 
   border-radius: 5px;
   padding: ${({ theme }) => theme.space[8]};

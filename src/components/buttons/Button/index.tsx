@@ -15,14 +15,14 @@ export interface IButtonProps
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  flexDirection?: 'row' | 'row-reverse';
+  $flexDirection?: 'row' | 'row-reverse';
   variant?: IButtonVariantsKeys;
   icon?: IconProp | IconDefinition;
   icon2?: IconProp | IconDefinition;
   styleIcon?: React.CSSProperties;
   iconClassName?: string;
   text?: string | null;
-  full?: boolean;
+  $full?: boolean;
   iconSpin?: boolean;
   loading?: boolean;
   $fontWeight?: fontWeightType;
@@ -32,7 +32,7 @@ export interface IButtonProps
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
   (
     {
-      flexDirection = 'row',
+      $flexDirection = 'row',
       variant = 'primary',
       type = 'button',
       className,
@@ -42,7 +42,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       icon2,
       text = '',
       iconSpin = false,
-      full = false,
+      $full = false,
       loading,
       $fontSize,
       $fontWeight,
@@ -52,15 +52,15 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
   ) => {
     return (
       <WrapperButton
-        full={full}
+        $full={$full}
         className={className}
         type={type}
         variant={variant}
-        flexDirection={flexDirection}
+        $flexDirection={$flexDirection}
         $fontWeight={$fontWeight}
         $fontSize={$fontSize}
         {...rest}
-        hasGap={!!icon && (text?.length || 0) > 0}
+        $hasGap={!!icon && (text?.length || 0) > 0}
         loading={loading}
         ref={ref}
       >
