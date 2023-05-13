@@ -29,10 +29,9 @@ export const defaultTheme = {
     },
   },
   borderRadius: {
-    btnRectangle: '4px',
-    btnRound: '50%',
-    input: '5px',
-    card: '5px',
+    '4': '4px',
+    '5': '5px',
+    '100%': '100%',
   },
   fontSize: {
     /** @property 0.625rem (10px) */

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  width: 100vw;
+  width: 100%;
   height: 60px;
 
   background-color: ${({ theme }) => theme.pallet.white.W100};
@@ -21,15 +21,6 @@ export const StyledHeader = styled.header`
       font-weight: ${({ theme }) => theme.fontWeight.bold};
       font-size: ${({ theme }) => theme.fontSize.xl};
       color: ${({ theme }) => theme.pallet.secondary};
-    }
-    > h2 {
-      font-weight: ${({ theme }) => theme.fontWeight.regular};
-      font-size: ${({ theme }) => theme.fontSize.lg};
-      color: ${({ theme }) => theme.pallet.gray.G200};
-
-      border-left: 2px solid ${({ theme }) => theme.pallet.gray.G200};
-      margin-left: ${({ theme }) => theme.space[8]};
-      padding-left: ${({ theme }) => theme.space[8]};
     }
   }
 `;

@@ -1,5 +1,3 @@
 import React from 'react';
 
-export const ContactDetail: React.FC = () => (
-  <div> ContactDetail </div>
-);
+export const ContactDetail = () => <div> ContactDetail </div>;

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 // COMPONENTS
-import { Header } from '../../components/Header';
+import { Header } from 'components/headers';
 
 // STYLES
 import { Wrapper, Content } from './styles';

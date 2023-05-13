@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.main`
-  width: 100vw;
+  width: 100%;
 `;
 
 export const Content = styled.section`
