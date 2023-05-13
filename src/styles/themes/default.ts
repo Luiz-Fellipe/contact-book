@@ -8,7 +8,6 @@ export const defaultTheme = {
       W200: '#F2F7FA',
     },
     black: {
-      B100: 'rgba(0,0,0,0.1)',
       B500: '#171717',
     },
     blue: {
@@ -27,6 +26,7 @@ export const defaultTheme = {
       warning: '#FFD700',
       info: '#006DBA',
     },
+    overlay: 'rgba(0,0,0,0.5)',
   },
   borderRadius: {
     '4': '4px',
