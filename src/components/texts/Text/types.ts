@@ -1,5 +1,5 @@
 import { SlotProps } from '@radix-ui/react-slot';
-import { defaultTheme } from 'styles/themes/default';
+import type { fontSizeType, fontWeightType } from 'styles/themes/default';
 
 /**
  * Props for the Text component
@@ -19,10 +19,10 @@ export interface ITextProps extends SlotProps {
   /**
    * sets a font-weight for the text
    *
-   * @type {keyof typeof defaultTheme.fontWeight}
+   * @type {fontWeightType}
    * @memberof ITextProps
    */
-  $fontWeight?: keyof typeof defaultTheme.fontWeight;
+  $fontWeight?: fontWeightType;
   /**
    * If the Text should be rendered as a text or paragraph,
    *
@@ -40,10 +40,10 @@ export interface ITextProps extends SlotProps {
   /**
    * text font size
    *
-   * @type {keyof typeof defaultTheme.fontSize}
+   * @type {fontSizeType}
    * @memberof ITextProps
    */
-  $fontSize?: keyof typeof defaultTheme.fontSize;
+  $fontSize?: fontSizeType;
 
   /**
    * if true the whole text is always displayed on the screen, if necessary it breaks lines

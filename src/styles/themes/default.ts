@@ -11,6 +11,11 @@ export const defaultTheme = {
       B100: 'rgba(0,0,0,0.1)',
       B500: '#171717',
     },
+    blue: {
+      B100: '#0A7EE3',
+      B200: '#0545CA',
+      B300: '#0215B0',
+    },
     gray: {
       G50: '#F0F2F7',
       G100: '#C3CACF',
@@ -75,3 +80,6 @@ export const defaultTheme = {
     xxl: '(min-width: 1400px)',
   },
 } as const;
+
+export type fontSizeType = keyof typeof defaultTheme.fontSize;
+export type fontWeightType = keyof typeof defaultTheme.fontWeight;
