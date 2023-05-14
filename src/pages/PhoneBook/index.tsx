@@ -12,9 +12,11 @@ import { usePhoneBook } from './hooks/usePhoneBook';
 
 // STYLES
 import { Wrapper, Header, Content } from './styles';
+import { ModalEditContact } from './components/ModalEditContact';
 
 const PhoneBook = () => {
-  const { isOpenModal, setOpenModal } = usePhoneBook();
+  const { isOpenModal, setOpenModal, isOpenModalEdit, setOpenModalEdit } =
+    usePhoneBook();
 
   return (
     <Wrapper>
@@ -45,6 +47,26 @@ const PhoneBook = () => {
       <ModalAddContact
         isOpen={isOpenModal}
         onClose={() => setOpenModal(false)}
+      />
+      <ModalEditContact
+        isOpen={isOpenModalEdit}
+        onClose={() => setOpenModalEdit(false)}
+        defaultData={{
+          name: 'teste',
+          email: 'teste@teste.com',
+          addresses: [
+            {
+              id: 1,
+              address: 'endereço teste',
+            },
+          ],
+          phoneNumbers: [
+            {
+              id: 1,
+              number: '62995767758',
+            },
+          ],
+        }}
       />
     </Wrapper>
   );
