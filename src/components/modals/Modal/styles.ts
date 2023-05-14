@@ -9,6 +9,7 @@ export const StyledModalHeader = styled.div`
   > div {
     display: flex;
     flex-direction: column;
+    max-width: 80%;
   }
 
   > button {
@@ -19,4 +20,6 @@ export const StyledModalHeader = styled.div`
 export const StyledContent = styled.div`
   flex: 1;
   overflow: auto;
+
+  padding: 0 ${({ theme }) => theme.space[4]};
 `;

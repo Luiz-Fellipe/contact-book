@@ -36,7 +36,8 @@ export const Root = ({
       gap: theme?.space[16],
       border: 'none',
       backgroundColor: theme?.pallet.primary,
-      padding: theme?.space[8],
+      padding: theme?.space[16],
+      position: 'relative',
     },
     overlay: {
       backgroundColor: theme?.pallet.overlay,
@@ -72,11 +73,21 @@ export const Header = ({
   return (
     <StyledModalHeader {...props}>
       <div>
-        <Text $fontWeight="bold" $fontSize="lg">
+        <Text
+          $fontWeight="bold"
+          $fontSize="lg"
+          color="secondary"
+          $withoutTextEllipses
+        >
           <h2>{title}</h2>
         </Text>
         {!!description && (
-          <Text $fontWeight="regular" color="gray" $fontSize="sm">
+          <Text
+            $fontWeight="regular"
+            color="gray"
+            $fontSize="sm"
+            $withoutTextEllipses
+          >
             <p>{description}</p>
           </Text>
         )}

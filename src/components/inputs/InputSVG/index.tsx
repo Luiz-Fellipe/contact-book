@@ -79,7 +79,12 @@ export const InputSVG = React.forwardRef<HTMLInputElement, IInputProps>(
           />
         </RowInput>
         {error && (
-          <Text $fontSize="sm" color="danger" $fontWeight="medium">
+          <Text
+            $fontSize="sm"
+            color="danger"
+            $fontWeight="medium"
+            $withoutTextEllipses
+          >
             <span>{error as string}</span>
           </Text>
         )}

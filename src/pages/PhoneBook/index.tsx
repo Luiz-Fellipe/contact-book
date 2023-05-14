@@ -1,4 +1,3 @@
-import React from 'react';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 // COMPONENTS
@@ -6,11 +5,17 @@ import { Text } from 'components/texts';
 import { InputSVG } from 'components/inputs/InputSVG';
 import { Button } from 'components/buttons';
 import ContactList from './components/ContactList';
+import { ModalAddContact } from './components/ModalAddContact';
+
+// HOOKS
+import { usePhoneBook } from './hooks/usePhoneBook';
 
 // STYLES
 import { Wrapper, Header, Content } from './styles';
 
 const PhoneBook = () => {
+  const { isOpenModal, setOpenModal } = usePhoneBook();
+
   return (
     <Wrapper>
       <Header>
@@ -29,12 +34,18 @@ const PhoneBook = () => {
             $fontSize="sm"
             icon={faUserPlus}
             variant="secondary"
+            onClick={() => setOpenModal(true)}
           />
         </div>
       </Header>
       <Content>
         <ContactList />
       </Content>
+
+      <ModalAddContact
+        isOpen={isOpenModal}
+        onClose={() => setOpenModal(false)}
+      />
     </Wrapper>
   );
 };

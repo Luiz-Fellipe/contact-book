@@ -24,7 +24,12 @@ export const Input = React.forwardRef<HTMLInputElement, IInputProps>(
     <WrapperInput $loading={loading} $withError={!!error} className={className}>
       <input ref={ref} {...rest} disabled={disabled || loading} />
       {error && (
-        <Text $fontSize="sm" color="danger" $fontWeight="medium">
+        <Text
+          $fontSize="sm"
+          color="danger"
+          $fontWeight="medium"
+          $withoutTextEllipses
+        >
           <span>{error as string}</span>
         </Text>
       )}
