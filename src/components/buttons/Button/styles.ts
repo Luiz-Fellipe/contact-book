@@ -74,10 +74,32 @@ const link = css`
   }
 `;
 
+const danger = css`
+  background-color: ${({ theme }) => theme.pallet.feedback.danger};
+  color: ${({ theme }) => theme.pallet.white.W100};
+  border: 2px solid ${({ theme }) => theme.pallet.feedback.danger};
+
+  &:not([disabled]) {
+    &:focus:not(:hover) {
+      border-color: ${({ theme }) => theme.pallet.red.R400};
+      background-color: ${({ theme }) => theme.pallet.red.R300};
+    }
+    &:hover {
+      border-color: ${({ theme }) => theme.pallet.red.R400};
+      background-color: ${({ theme }) => theme.pallet.red.R300};
+    }
+    &:focus:hover {
+      border-color: ${({ theme }) => theme.pallet.red.R400};
+      background-color: ${({ theme }) => theme.pallet.red.R300};
+    }
+  }
+`;
+
 const variants: Record<IButtonVariantsKeys, RuleSet<object>> = {
   primary,
   secondary,
   link,
+  danger,
 };
 
 export const WrapperButton = styled.button<IButtonType>`

@@ -1,7 +1,13 @@
 import { useDispatch } from 'react-redux';
 
-import { onOpenModalEditContact } from 'redux/reducers/Contacts';
+// TYPES
 import { IContactsStates } from 'redux/reducers/Contacts/types';
+
+// REDUX
+import {
+  onOpenModalEditContact,
+  onOpenAlertDeleteContact,
+} from 'redux/reducers/Contacts';
 
 export function useContactCard() {
   const dispatch = useDispatch();
@@ -12,5 +18,11 @@ export function useContactCard() {
     dispatch(onOpenModalEditContact(value));
   }
 
-  return { setOpenModalEditContact };
+  function setOpenAlertDeleteContact(
+    value: IContactsStates['openAlertDeleteContact']
+  ) {
+    dispatch(onOpenAlertDeleteContact(value));
+  }
+
+  return { setOpenModalEditContact, setOpenAlertDeleteContact };
 }

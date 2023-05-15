@@ -1,1 +1,1 @@
-export type IButtonVariantsKeys = 'primary' | 'secondary' | 'link';
+export type IButtonVariantsKeys = 'primary' | 'secondary' | 'link' | 'danger';

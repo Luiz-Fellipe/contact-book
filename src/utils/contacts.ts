@@ -1,17 +1,14 @@
-interface Contact {
-  id: number;
-  name: string;
-}
+import { IContact } from 'types/contacts';
 
 /**
  * Groups contacts by their first letter of the name.
  * @param contacts - The array of contacts to be grouped.
  * @returns An object containing contacts grouped by the first letter of their name.
  */
-function groupContactsByFirstLetter(contacts: Contact[]): {
-  [letter: string]: Contact[];
+function groupContactsByFirstLetter(contacts: IContact[]): {
+  [letter: string]: IContact[];
 } {
-  const result: { [letter: string]: Contact[] } = {};
+  const result: { [letter: string]: IContact[] } = {};
 
   contacts.forEach((contact) => {
     const firstLetter = contact.name.charAt(0).toUpperCase();

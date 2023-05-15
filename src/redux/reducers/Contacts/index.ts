@@ -6,7 +6,12 @@ import { IContactsStates } from './types';
 
 const initialState: IContactsStates = {
   openModalAddContact: false,
+
   openModalEditContact: {
+    value: false,
+    contactId: null,
+  },
+  openAlertDeleteContact: {
     value: false,
     contactId: null,
   },
@@ -28,10 +33,19 @@ export const contactsSlice = createSlice({
     ) => {
       state.openModalEditContact = action.payload;
     },
+    onOpenAlertDeleteContact: (
+      state,
+      action: PayloadAction<IContactsStates['openAlertDeleteContact']>
+    ) => {
+      state.openAlertDeleteContact = action.payload;
+    },
   },
 });
 
-export const { onOpenModalAddContact, onOpenModalEditContact } =
-  contactsSlice.actions;
+export const {
+  onOpenModalAddContact,
+  onOpenModalEditContact,
+  onOpenAlertDeleteContact,
+} = contactsSlice.actions;
 
 export default contactsSlice.reducer;

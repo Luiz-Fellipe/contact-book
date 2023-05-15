@@ -38,3 +38,16 @@ export function addContact(
     signal,
   });
 }
+
+export function deleteContact(
+  {
+    contactId,
+  }: {
+    contactId: IContact['id'];
+  },
+  signal?: GenericAbortSignal
+): Promise<AxiosResponse<IContact[]>> {
+  return api.delete(`/contacts/${contactId}`, {
+    signal,
+  });
+}

@@ -15,6 +15,10 @@ export const defaultTheme = {
       B200: '#0545CA',
       B300: '#0215B0',
     },
+    red: {
+      R300: '#EE9191',
+      R400: '#D14343',
+    },
     gray: {
       G50: '#F0F2F7',
       G100: '#C3CACF',

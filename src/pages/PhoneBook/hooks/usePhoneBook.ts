@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'redux/store';
+
+// REDUX
 import {
   onOpenModalAddContact,
   onOpenModalEditContact,
+  onOpenAlertDeleteContact,
 } from 'redux/reducers/Contacts';
-import { RootState } from 'redux/store';
 
 // HOOKS
 import useDebounce from 'hooks/useDebounce';
@@ -27,6 +30,10 @@ export function usePhoneBook() {
     (state: RootState) => state.contacts.openModalEditContact
   );
 
+  const openAlertDeleteContact = useSelector(
+    (state: RootState) => state.contacts.openAlertDeleteContact
+  );
+
   function setOpenModalAddContact(
     value: IContactsStates['openModalAddContact']
   ) {
@@ -39,12 +46,19 @@ export function usePhoneBook() {
     dispatch(onOpenModalEditContact(value));
   }
 
+  function setOpenAlertDeleteContact(
+    value: IContactsStates['openAlertDeleteContact']
+  ) {
+    dispatch(onOpenAlertDeleteContact(value));
+  }
+
   return {
     openModalAddContact,
     setOpenModalAddContact,
     openModalEditContact,
     setOpenModalEditContact,
-
+    openAlertDeleteContact,
+    setOpenAlertDeleteContact,
     searchValue,
     setSearchValue,
     debouncedSearchValue,

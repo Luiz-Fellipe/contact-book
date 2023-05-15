@@ -15,6 +15,7 @@ import { LoadingBox } from 'components/loadings';
 import { FeedbackBox } from 'components/feedbacks';
 import { ModalAddContact } from './components/ModalAddContact';
 import { ModalEditContact } from './components/ModalEditContact';
+import { AlertDeleteContact } from './components/AlertDeleteContact';
 
 // SERVICES
 import { useGetContactsInfinityQuery } from 'services/queries/contacts/useGetContactsQuery';
@@ -31,6 +32,8 @@ const PhoneBook = () => {
     setOpenModalAddContact,
     openModalEditContact,
     setOpenModalEditContact,
+    openAlertDeleteContact,
+    setOpenAlertDeleteContact,
 
     searchValue,
     setSearchValue,
@@ -125,6 +128,17 @@ const PhoneBook = () => {
             contactId: null,
           })
         }
+      />
+
+      <AlertDeleteContact
+        open={openAlertDeleteContact.value}
+        contactId={openAlertDeleteContact.contactId}
+        onOpenChange={() => {
+          setOpenAlertDeleteContact({
+            value: false,
+            contactId: null,
+          });
+        }}
       />
     </Wrapper>
   );

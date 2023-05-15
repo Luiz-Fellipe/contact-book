@@ -13,9 +13,10 @@ import { Dropdown } from 'components/dropdowns';
 
 interface IDropdownContact {
   onEdit: () => void;
+  onDelete: () => void;
 }
 
-export const DropdownContact = ({ onEdit }: IDropdownContact) => {
+export const DropdownContact = ({ onEdit, onDelete }: IDropdownContact) => {
   const theme = useTheme();
 
   return (
@@ -44,7 +45,7 @@ export const DropdownContact = ({ onEdit }: IDropdownContact) => {
           />
           <span>Editar</span>
         </Dropdown.Item>
-        <Dropdown.Item>
+        <Dropdown.Item onClick={onDelete}>
           <FontAwesomeIcon
             icon={faUserMinus}
             style={{ color: theme?.pallet.feedback.danger }}

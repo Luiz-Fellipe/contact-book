@@ -7,4 +7,8 @@ export interface IContactsStates {
     value: boolean;
     contactId: IContact['id'] | null;
   };
+  openAlertDeleteContact: {
+    value: boolean;
+    contactId: IContact['id'] | null;
+  };
 }

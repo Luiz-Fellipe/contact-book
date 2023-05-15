@@ -426,23 +426,6 @@
       ]
     },
     {
-      "id": 25,
-      "name": "Allan Feeney",
-      "email": "devluizfellipe@gmail.com",
-      "phones": [
-        {
-          "id": 1,
-          "number": "62996767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "096 Garrett Valleys, Klockofurt-NY"
-        }
-      ]
-    },
-    {
       "id": 26,
       "name": "Rodney Schaden I",
       "email": "devluizfellipe@gmail.com",
@@ -863,111 +846,43 @@
           "address": "Condomínio De La Flor"
         }
       ],
-      "name": "Aaloucura",
-      "email": "devluizfellipe@gmail.com",
-      "id": 50
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
-      "name": "adoido",
-      "email": "devluizfellipe@gmail.com",
-      "id": 51
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
-      "name": "ALUIZ FELLIPE DA SILVA",
-      "email": "devluizfellipe@gmail.com",
-      "id": 52
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
-      "name": "LUIZ FELLIPE DA SILVA",
-      "email": "devluizfellipe@gmail.com",
-      "id": 53
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
-      "name": "Amanda Nunes",
-      "email": "luiz@gmail.com",
-      "id": 54
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
-      "name": "LUIZ FELLIPE DA SILVA",
-      "email": "devluizfellipe@gmail.com",
-      "id": 55
-    },
-    {
-      "phones": [
-        {
-          "id": 1,
-          "number": "62995767758"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 1,
-          "address": "Condomínio De La Flor"
-        }
-      ],
       "name": "Arnaldo Cezar",
       "email": "devluizfellipe@gmail.com",
       "id": 56
+    },
+    {
+      "phones": [
+        {
+          "id": 1,
+          "number": "62995767758"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "Condomínio De La Flor"
+        }
+      ],
+      "name": "Aroldo Torres",
+      "email": "aroldotorres@gmail.com",
+      "id": 57
+    },
+    {
+      "phones": [
+        {
+          "id": 1,
+          "number": "1234567891023"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "Condomínio De La Flor"
+        }
+      ],
+      "name": "Alan Franco",
+      "email": "allan@gmail.com",
+      "id": 58
     }
   ]
 }

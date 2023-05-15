@@ -8,16 +8,19 @@ import { getContactsInitials } from 'utils/contacts';
 // HOOKS
 import { useContactCard } from './hooks/useContactCard';
 
+// TYPES
+import { IContact } from 'types/contacts';
+
 // STYLES
 import { Wrapper } from './styles';
 
-interface IContactCardProps {
-  id: number;
-  name: string;
-}
-
-export const ContactCard = ({ id, name }: IContactCardProps) => {
-  const { setOpenModalEditContact } = useContactCard();
+export const ContactCard = ({
+  id,
+  name,
+  phones,
+}: Pick<IContact, 'id' | 'name' | 'phones'>) => {
+  const { setOpenModalEditContact, setOpenAlertDeleteContact } =
+    useContactCard();
 
   return (
     <Wrapper key={id}>
@@ -32,11 +35,17 @@ export const ContactCard = ({ id, name }: IContactCardProps) => {
           <span>{name}</span>
         </Text>
         <Text $fontSize="xs" $fontWeight="regular" color="gray">
-          <span>(62) 99576-7758</span>
+          <span>{phones[0].number}</span>
         </Text>
       </div>
       <div className="contact-item-actions">
         <DropdownContact
+          onDelete={() => {
+            setOpenAlertDeleteContact({
+              value: true,
+              contactId: id,
+            });
+          }}
           onEdit={() => {
             setOpenModalEditContact({
               value: true,

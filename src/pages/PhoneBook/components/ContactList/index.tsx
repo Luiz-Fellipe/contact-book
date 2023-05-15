@@ -23,7 +23,12 @@ export const ContactList = ({ contacts }: { contacts: IContact[] }) => {
           </Text>
 
           {contacts.map((contact) => (
-            <ContactCard key={contact.id} id={contact.id} name={contact.name} />
+            <ContactCard
+              key={contact.id}
+              id={contact.id}
+              name={contact.name}
+              phones={contact.phones}
+            />
           ))}
         </ContactGroup>
       ))}
