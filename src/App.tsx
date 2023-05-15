@@ -1,4 +1,5 @@
 import { store } from 'redux/store';
+import { ToastContainer } from 'react-toastify';
 
 //PROVIDERS
 import { QueryClientProvider } from '@tanstack/react-query';
@@ -15,6 +16,7 @@ import router from './routes';
 //STYLES
 import { defaultTheme } from './styles/themes/default';
 import { GlobalStyle } from './styles/global';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Provider store={store}>
           <RouterProvider router={router} />
+          <ToastContainer />
         </Provider>
       </QueryClientProvider>
     </ThemeProvider>

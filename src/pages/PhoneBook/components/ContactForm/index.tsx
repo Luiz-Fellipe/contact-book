@@ -18,6 +18,7 @@ const ContactForm = ({
   onSubmitForm,
   onCancel,
   defaultData,
+  $isSaving,
 }: IContactFormProps) => {
   const {
     onSubmit,
@@ -144,12 +145,14 @@ const ContactForm = ({
           text="Cancelar"
           onClick={onCancel}
           $fontSize="sm"
+          $isLoading={$isSaving}
           variant="primary"
         />
         <Button
           type="submit"
           text="Salvar"
           $fontSize="sm"
+          $isLoading={$isSaving}
           variant="secondary"
         />
       </Footer>

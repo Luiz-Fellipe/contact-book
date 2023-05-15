@@ -19,9 +19,22 @@ export function getContacts(
   signal?: GenericAbortSignal
 ): Promise<AxiosResponse<IContact[]>> {
   return api.get(
-    `/contacts?_page=${page}&_limit=${limit}&name_like=${search}&_sort=name&_order=asc`,
+    `/contacts?_sort=name&_order=asc&name_like=${search}&_page=${page}&_limit=${limit}`,
     {
       signal,
     }
   );
+}
+
+export function addContact(
+  {
+    contact,
+  }: {
+    contact: Omit<IContact, 'id'>;
+  },
+  signal?: GenericAbortSignal
+): Promise<AxiosResponse<IContact[]>> {
+  return api.post('/contacts', contact, {
+    signal,
+  });
 }

@@ -34,14 +34,10 @@ function groupContactsByFirstLetter(contacts: Contact[]): {
 function getContactsInitials(name: string): string {
   const splittedName = name.split(' ');
 
-  const firstInitial = splittedName[0].charAt(0);
-  const secondInitial = splittedName[1]?.charAt(0);
+  const firstInitial = splittedName[0]?.charAt(0) || '';
+  const secondInitial = splittedName[1]?.charAt(0) || '';
 
-  if (firstInitial && secondInitial) {
-    return firstInitial + secondInitial;
-  }
-
-  return '';
+  return firstInitial + secondInitial;
 }
 
 export { groupContactsByFirstLetter, getContactsInitials };
