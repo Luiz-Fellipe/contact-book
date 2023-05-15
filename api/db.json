@@ -1,9 +1,6 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "Luiz Fellipe",
-      "email": "devluizfellipe@gmail.com",
       "phones": [
         {
           "id": 1,
@@ -13,60 +10,12 @@
       "addresses": [
         {
           "id": 1,
-          "address": "Parque Oeste Industrial, Goiânia-GO"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "phones": [
-        {
-          "id": 2,
-          "number": "1234567890"
+          "address": "Condomínio De La Flor"
         }
       ],
-      "addresses": [
-        {
-          "id": 2,
-          "address": "123 Main Street"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Jane Smith",
-      "email": "janesmith@example.com",
-      "phones": [
-        {
-          "id": 3,
-          "number": "9876543210"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 3,
-          "address": "456 Elm Avenue"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Robert Johnson",
-      "email": "robertjohnson@example.com",
-      "phones": [
-        {
-          "id": 4,
-          "number": "5551234567"
-        }
-      ],
-      "addresses": [
-        {
-          "id": 4,
-          "address": "789 Oak Street"
-        }
-      ]
+      "name": "LUIZ FELLIPE DA SILVA",
+      "email": "devluizfellipe@gmail.com",
+      "id": 1
     }
   ]
 }

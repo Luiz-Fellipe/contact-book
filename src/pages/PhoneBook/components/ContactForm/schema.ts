@@ -4,6 +4,7 @@ const phoneRegExp =
   /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 
 export const contactSchema = object({
+  id: number(),
   name: string().trim().required('O campo nome é obrigatório'),
   email: string()
     .email('O campo deve ser um e-mail válido')

@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // COMPONENTS
 import { DefaultAlert } from 'components/alerts';
 import { Button } from 'components/buttons';
-import { Text } from 'components/texts';
 
 // HOOKS
 import { useModalDeleteContact } from './hooks/useDeleteContact';
 
 // TYPES
 import { IContact } from 'types/contacts';
+
+// STYLES
+import { Description, Title } from './styles';
 
 interface IAlertDeleteContactProps
   extends React.ComponentProps<typeof DefaultAlert.AlertDialog> {
@@ -27,26 +29,17 @@ export const AlertDeleteContact = ({
   return (
     <DefaultAlert.AlertDialog {...rest}>
       <DefaultAlert.AlertDialogContent $maxWidth="450px">
-        <DefaultAlert.AlertTitle>
-          <Text $fontSize="lg" color="secondary" $fontWeight="medium">
+        <DefaultAlert.AlertTitle asChild>
+          <Title>
             <h4>Remover Contato</h4>
-          </Text>
-          <Text $fontSize="lg" color="secondary" $fontWeight="medium">
             <FontAwesomeIcon icon={faTrashCan} />
-          </Text>
+          </Title>
         </DefaultAlert.AlertTitle>
-        <DefaultAlert.AlertDialogDescription>
-          <Text
-            $fontSize="md"
-            color="black"
-            $fontWeight="regular"
-            $withoutTextEllipses
-          >
-            <p>
-              Você tem certeza que deseja remover esse contato ? essa ação é
-              irreversivel.
-            </p>
-          </Text>
+        <DefaultAlert.AlertDialogDescription asChild>
+          <Description>
+            Você tem certeza que deseja remover esse contato ? essa ação é
+            irreversivel.
+          </Description>
         </DefaultAlert.AlertDialogDescription>
 
         <DefaultAlert.AlertDialogActionsContainer>

@@ -26,6 +26,19 @@ export function getContacts(
   );
 }
 
+export function getContactById(
+  {
+    contactId,
+  }: {
+    contactId: IContact['id'];
+  },
+  signal?: GenericAbortSignal
+): Promise<AxiosResponse<IContact>> {
+  return api.get(`/contacts/${contactId}`, {
+    signal,
+  });
+}
+
 export function addContact(
   {
     contact,
@@ -33,8 +46,21 @@ export function addContact(
     contact: Omit<IContact, 'id'>;
   },
   signal?: GenericAbortSignal
-): Promise<AxiosResponse<IContact[]>> {
+): Promise<AxiosResponse<IContact>> {
   return api.post('/contacts', contact, {
+    signal,
+  });
+}
+
+export function editContact(
+  {
+    contact,
+  }: {
+    contact: IContact;
+  },
+  signal?: GenericAbortSignal
+): Promise<AxiosResponse<IContact>> {
+  return api.put(`/contacts/${contact.id}`, contact, {
     signal,
   });
 }
@@ -46,7 +72,7 @@ export function deleteContact(
     contactId: IContact['id'];
   },
   signal?: GenericAbortSignal
-): Promise<AxiosResponse<IContact[]>> {
+): Promise<AxiosResponse<IContact>> {
   return api.delete(`/contacts/${contactId}`, {
     signal,
   });

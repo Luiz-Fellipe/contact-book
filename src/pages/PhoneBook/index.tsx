@@ -122,6 +122,7 @@ const PhoneBook = () => {
 
       <ModalEditContact
         isOpen={openModalEditContact.value}
+        contactId={openModalEditContact.contactId}
         onClose={() =>
           setOpenModalEditContact({
             value: false,
