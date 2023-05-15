@@ -1,0 +1,21 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Luiz Fellipe",
+      "email": "devluizfellipe@gmail.com",
+      "phones": [
+        {
+          "id": 1,
+          "number": "62995767758"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "Parque Oeste Industrial, Goiânia-GO"
+        }
+      ]
+    }
+  ]
+}
