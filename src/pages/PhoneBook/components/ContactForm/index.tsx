@@ -82,8 +82,8 @@ const ContactForm = ({
                   id={`phone-${phone.key}`}
                   type="tel"
                   placeholder="Insira um telefone aqui"
-                  error={errors?.phoneNumbers?.[index]?.number?.message}
-                  {...register(`phoneNumbers.${index}.number`)}
+                  error={errors?.phones?.[index]?.number?.message}
+                  {...register(`phones.${index}.number`)}
                 />
                 <Button
                   icon={faXmark}

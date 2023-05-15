@@ -1,3 +1,10 @@
+import { IContact } from 'types/contacts';
+
 export interface IContactsStates {
-  openModal: boolean;
+  openModalAddContact: boolean;
+
+  openModalEditContact: {
+    value: boolean;
+    contactId: IContact['id'] | null;
+  };
 }

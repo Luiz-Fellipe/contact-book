@@ -11,8 +11,13 @@ import { useTheme } from 'styled-components';
 import { Button } from 'components/buttons';
 import { Dropdown } from 'components/dropdowns';
 
-export const DropdownContact = () => {
+interface IDropdownContact {
+  onEdit: () => void;
+}
+
+export const DropdownContact = ({ onEdit }: IDropdownContact) => {
   const theme = useTheme();
+
   return (
     <Dropdown.Root>
       <Dropdown.Trigger asChild>
@@ -32,7 +37,7 @@ export const DropdownContact = () => {
           />
           <span>Visualizar</span>
         </Dropdown.Item>
-        <Dropdown.Item>
+        <Dropdown.Item onClick={onEdit}>
           <FontAwesomeIcon
             style={{ color: theme?.pallet.feedback.warning }}
             icon={faUserPen}

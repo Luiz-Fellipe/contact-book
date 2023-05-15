@@ -5,20 +5,33 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { IContactsStates } from './types';
 
 const initialState: IContactsStates = {
-  openModal: false,
+  openModalAddContact: false,
+  openModalEditContact: {
+    value: false,
+    contactId: null,
+  },
 };
 
 export const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
-    onOpenModal: (state, action: PayloadAction<boolean>) => {
-      state.openModal = action.payload;
+    onOpenModalAddContact: (
+      state,
+      action: PayloadAction<IContactsStates['openModalAddContact']>
+    ) => {
+      state.openModalAddContact = action.payload;
+    },
+    onOpenModalEditContact: (
+      state,
+      action: PayloadAction<IContactsStates['openModalEditContact']>
+    ) => {
+      state.openModalEditContact = action.payload;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { onOpenModal } = contactsSlice.actions;
+export const { onOpenModalAddContact, onOpenModalEditContact } =
+  contactsSlice.actions;
 
 export default contactsSlice.reducer;

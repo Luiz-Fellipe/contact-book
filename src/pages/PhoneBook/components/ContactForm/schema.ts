@@ -9,7 +9,7 @@ export const contactSchema = object({
     .email('O campo deve ser um e-mail válido')
     .required('O campo email é obrigatório'),
 
-  phoneNumbers: array()
+  phones: array()
     .of(
       object().shape({
         id: number().required(),

@@ -18,8 +18,8 @@ export function useContactForm({
     resolver: yupResolver(contactSchema),
     defaultValues: {
       ...defaultData,
-      phoneNumbers: defaultData?.phoneNumbers
-        ? defaultData.phoneNumbers
+      phones: defaultData?.phones
+        ? defaultData.phones
         : [
             {
               id: 1,
@@ -43,7 +43,7 @@ export function useContactForm({
     remove: removePhoneField,
   } = useFieldArray({
     control,
-    name: 'phoneNumbers',
+    name: 'phones',
     keyName: 'key',
     rules: {
       maxLength: 4,

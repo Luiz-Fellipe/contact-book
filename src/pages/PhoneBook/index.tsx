@@ -6,17 +6,21 @@ import { InputSVG } from 'components/inputs/InputSVG';
 import { Button } from 'components/buttons';
 import ContactList from './components/ContactList';
 import { ModalAddContact } from './components/ModalAddContact';
+import { ModalEditContact } from './components/ModalEditContact';
 
 // HOOKS
 import { usePhoneBook } from './hooks/usePhoneBook';
 
 // STYLES
 import { Wrapper, Header, Content } from './styles';
-import { ModalEditContact } from './components/ModalEditContact';
 
 const PhoneBook = () => {
-  const { isOpenModal, setOpenModal, isOpenModalEdit, setOpenModalEdit } =
-    usePhoneBook();
+  const {
+    openModalAddContact,
+    setOpenModalAddContact,
+    openModalEditContact,
+    setOpenModalEditContact,
+  } = usePhoneBook();
 
   return (
     <Wrapper>
@@ -36,7 +40,7 @@ const PhoneBook = () => {
             $fontSize="sm"
             icon={faUserPlus}
             variant="secondary"
-            onClick={() => setOpenModal(true)}
+            onClick={() => setOpenModalAddContact(true)}
           />
         </div>
       </Header>
@@ -45,28 +49,18 @@ const PhoneBook = () => {
       </Content>
 
       <ModalAddContact
-        isOpen={isOpenModal}
-        onClose={() => setOpenModal(false)}
+        isOpen={openModalAddContact}
+        onClose={() => setOpenModalAddContact(false)}
       />
+
       <ModalEditContact
-        isOpen={isOpenModalEdit}
-        onClose={() => setOpenModalEdit(false)}
-        defaultData={{
-          name: 'teste',
-          email: 'teste@teste.com',
-          addresses: [
-            {
-              id: 1,
-              address: 'endereço teste',
-            },
-          ],
-          phoneNumbers: [
-            {
-              id: 1,
-              number: '62995767758',
-            },
-          ],
-        }}
+        isOpen={openModalEditContact.value}
+        onClose={() =>
+          setOpenModalEditContact({
+            value: false,
+            contactId: null,
+          })
+        }
       />
     </Wrapper>
   );
