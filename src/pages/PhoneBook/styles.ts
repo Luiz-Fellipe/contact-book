@@ -39,4 +39,23 @@ export const Header = styled.div`
 
 export const Content = styled.div`
   margin-top: ${({ theme }) => theme.space[32]};
+
+  .button-load-more {
+    margin: ${({ theme }) => theme.space[32]} auto;
+  }
+`;
+
+export const NotFound = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: ${({ theme }) => theme.space[4]};
+
+  text-align: center;
+  padding: ${({ theme }) => theme.space[32]};
+  color: ${({ theme }) => theme.pallet.gray.G200};
+
+  > svg {
+    font-size: ${({ theme }) => theme.fontSize.xxxl};
+  }
 `;

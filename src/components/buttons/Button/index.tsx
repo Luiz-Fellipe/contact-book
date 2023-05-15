@@ -24,7 +24,7 @@ export interface IButtonProps
   text?: string | null;
   $full?: boolean;
   iconSpin?: boolean;
-  loading?: boolean;
+  $isLoading?: boolean;
   $fontWeight?: fontWeightType;
   $fontSize?: fontSizeType;
 }
@@ -43,7 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       text = '',
       iconSpin = false,
       $full = false,
-      loading,
+      $isLoading,
       $fontSize,
       $fontWeight,
       ...rest
@@ -61,7 +61,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
         $fontSize={$fontSize}
         {...rest}
         $hasGap={!!icon && (text?.length || 0) > 0}
-        loading={loading}
+        $isLoading={$isLoading}
         ref={ref}
       >
         {icon && (

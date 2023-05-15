@@ -5,7 +5,8 @@
   "author": "Luiz-Fellipe",
   "license": "MIT",
   "scripts": {
-    "start": "json-server -p 3333 --watch db.json"
+    "start": "json-server -p 3333 --watch db.json",
+    "start-big": "json-server -p 3333 --watch big-db.json"
   },
   "dependencies": {
     "json-server": "^0.17.3"

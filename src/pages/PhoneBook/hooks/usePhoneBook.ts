@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   onOpenModalAddContact,
@@ -5,10 +6,17 @@ import {
 } from 'redux/reducers/Contacts';
 import { RootState } from 'redux/store';
 
+// HOOKS
+import useDebounce from 'hooks/useDebounce';
+
 // TYPES
 import { IContactsStates } from 'redux/reducers/Contacts/types';
 
 export function usePhoneBook() {
+  const [searchValue, setSearchValue] = useState('');
+
+  const debouncedSearchValue = useDebounce<string>(searchValue, 500);
+
   const dispatch = useDispatch();
 
   const openModalAddContact = useSelector(
@@ -36,5 +44,9 @@ export function usePhoneBook() {
     setOpenModalAddContact,
     openModalEditContact,
     setOpenModalEditContact,
+
+    searchValue,
+    setSearchValue,
+    debouncedSearchValue,
   };
 }

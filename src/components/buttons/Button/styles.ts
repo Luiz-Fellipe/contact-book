@@ -6,7 +6,7 @@ type IButtonType = Pick<
   IButtonProps,
   | '$fontWeight'
   | '$fontSize'
-  | 'loading'
+  | '$isLoading'
   | 'variant'
   | '$full'
   | '$flexDirection'
@@ -107,8 +107,8 @@ export const WrapperButton = styled.button<IButtonType>`
   /* VARIANTS */
   ${(props) => props.variant && variants[props.variant]}
 
-  ${({ loading }) =>
-    loading
+  ${({ $isLoading }) =>
+    $isLoading
       ? css`
           cursor: progress !important;
         `

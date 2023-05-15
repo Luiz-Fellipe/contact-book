@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsersSlash } from '@fortawesome/free-solid-svg-icons';
-
 // COMPONENTS
 import { Text } from 'components/texts';
 import { ContactCard } from './components/ContactCard';
@@ -8,11 +5,14 @@ import { ContactCard } from './components/ContactCard';
 // HOOKS
 import { useContactList } from './hooks/useContactList';
 
-// STYLES
-import { ContactGroup, Wrapper, NotFound } from './styles';
+// TYPES
+import { IContact } from 'types/contacts';
 
-const ContactList = () => {
-  const { groupedContacts } = useContactList();
+// STYLES
+import { ContactGroup, Wrapper } from './styles';
+
+export const ContactList = ({ contacts }: { contacts: IContact[] }) => {
+  const { groupedContacts } = useContactList({ contacts });
 
   return (
     <Wrapper>
@@ -27,15 +27,6 @@ const ContactList = () => {
           ))}
         </ContactGroup>
       ))}
-
-      <NotFound>
-        <FontAwesomeIcon icon={faUsersSlash} />
-        <Text color="gray" $withoutTextEllipses>
-          <p>Nenhum contato foi encontrado em sua agenda</p>
-        </Text>
-      </NotFound>
     </Wrapper>
   );
 };
-
-export default ContactList;
