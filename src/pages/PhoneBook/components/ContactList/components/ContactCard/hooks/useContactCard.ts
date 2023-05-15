@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 // TYPES
 import { IContactsStates } from 'redux/reducers/Contacts/types';
@@ -12,6 +13,8 @@ import {
 export function useContactCard() {
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   function setOpenModalEditContact(
     value: IContactsStates['openModalEditContact']
   ) {
@@ -24,5 +27,5 @@ export function useContactCard() {
     dispatch(onOpenAlertDeleteContact(value));
   }
 
-  return { setOpenModalEditContact, setOpenAlertDeleteContact };
+  return { navigate, setOpenModalEditContact, setOpenAlertDeleteContact };
 }

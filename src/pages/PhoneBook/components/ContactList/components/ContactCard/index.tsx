@@ -1,9 +1,7 @@
 // COMPONENTS
 import { Text } from 'components/texts';
 import { DropdownContact } from './components/DropdownContact';
-
-// UTILS
-import { getContactsInitials } from 'utils/contacts';
+import { AvatarInitials } from 'components/avatars';
 
 // HOOKS
 import { useContactCard } from './hooks/useContactCard';
@@ -19,16 +17,12 @@ export const ContactCard = ({
   name,
   phones,
 }: Pick<IContact, 'id' | 'name' | 'phones'>) => {
-  const { setOpenModalEditContact, setOpenAlertDeleteContact } =
+  const { navigate, setOpenModalEditContact, setOpenAlertDeleteContact } =
     useContactCard();
 
   return (
     <Wrapper key={id}>
-      <div className="contact-item-initials">
-        <Text $fontSize="sm" $fontWeight="medium" color="primary">
-          <span>{getContactsInitials(name)}</span>
-        </Text>
-      </div>
+      <AvatarInitials name={name} />
 
       <div className="contact-item-infos">
         <Text $fontSize="md" $fontWeight="regular" color="black">
@@ -52,6 +46,7 @@ export const ContactCard = ({
               contactId: id,
             });
           }}
+          onView={() => navigate(`/contact/${id}`)}
         />
       </div>
     </Wrapper>

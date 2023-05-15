@@ -18,19 +18,6 @@ export const Wrapper = styled.div`
     background-color: ${({ theme }) => theme.pallet.gray.G100};
   }
 
-  > .contact-item-initials {
-    min-width: 38px;
-    min-height: 38px;
-    width: 38px;
-    height: 38px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 100%;
-    background-color: ${({ theme }) => theme.pallet.secondary};
-  }
-
   .contact-item-infos {
     display: flex;
     flex-direction: column;
