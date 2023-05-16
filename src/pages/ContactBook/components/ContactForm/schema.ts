@@ -1,7 +1,27 @@
 import { object, string, InferType, array, number } from 'yup';
 
-const phoneRegExp =
-  /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+/**
+ * 
+format phone number accepted (is saved without formatting)
+333-333-3333
+(333) 333-3333
+1-333-333-3333
+333.333.3333
+333-333-3333 x3333
+(333) 333-3333 x3333
+1-333-333-3333 x3333
+333.333.3333 x3333
+ */
+
+/**
+ * regex explanation
+ * ^ asserts the start of the string.
+   (?:\+?\d{1,3})? is an optional non-capturing group that matches an optional plus sign followed by 1 to 3 digits.
+  \d{10,14} matches 10 to 14 digits.
+  $ asserts the end of the string.
+ */
+
+const phoneRegExp = /^(?:\+?\d{1,3})?\d{10,14}$/;
 
 export const contactSchema = object({
   id: number(),
