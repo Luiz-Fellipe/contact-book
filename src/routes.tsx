@@ -6,6 +6,7 @@ import { DefaultLayout } from '_layouts/DefaultLayout';
 // PAGES
 import PhoneBook from 'pages/PhoneBook';
 import { ContactDetail } from 'pages/ContactDetail';
+import { GoogleContacts } from 'pages/GoogleContacts';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'contact/:contactId',
         element: <ContactDetail />,
+      },
+      {
+        path: 'contacts/google',
+        element: <GoogleContacts />,
       },
     ],
   },

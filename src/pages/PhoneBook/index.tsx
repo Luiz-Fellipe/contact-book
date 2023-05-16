@@ -1,5 +1,6 @@
 import {
   faAnglesDown,
+  faFileImport,
   faSpinner,
   faTriangleExclamation,
   faUserPlus,
@@ -35,6 +36,7 @@ const PhoneBook = () => {
     openAlertDeleteContact,
     setOpenAlertDeleteContact,
 
+    navigate,
     searchValue,
     setSearchValue,
     debouncedSearchValue,
@@ -77,7 +79,19 @@ const PhoneBook = () => {
             $fontSize="sm"
             icon={faUserPlus}
             variant="secondary"
-            onClick={() => setOpenModalAddContact(true)}
+            onClick={() =>
+              setOpenModalAddContact({
+                value: true,
+                defaultData: undefined,
+              })
+            }
+          />
+          <Button
+            text="Importar"
+            icon={faFileImport}
+            $fontSize="sm"
+            variant="secondary"
+            onClick={() => navigate('/contacts/google')}
           />
         </div>
       </Header>
@@ -116,8 +130,13 @@ const PhoneBook = () => {
       </Content>
 
       <ModalAddContact
-        isOpen={openModalAddContact}
-        onClose={() => setOpenModalAddContact(false)}
+        isOpen={openModalAddContact.value}
+        onClose={() =>
+          setOpenModalAddContact({
+            value: false,
+            defaultData: undefined,
+          })
+        }
       />
 
       <ModalEditContact

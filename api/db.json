@@ -36,6 +36,74 @@
       "name": "LUIZ FELLIPE DA SILVA",
       "email": "devluizfellipe@gmail.com",
       "id": 1
+    },
+    {
+      "phones": [
+        {
+          "id": 1,
+          "number": "+5562995767758"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "Condomínio De La Flor"
+        }
+      ],
+      "name": "teste",
+      "email": "luiz@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Lucas",
+      "email": "devlucasdallier@gmail.com",
+      "phones": [
+        {
+          "id": 1,
+          "number": "+5562984982049"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "Condominio Residencial Hayward"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Almoço de La Flor",
+      "email": "almoco@gmail.com",
+      "phones": [
+        {
+          "id": 1,
+          "number": "62991966651"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "teste "
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Barbara 💕",
+      "email": "barbara@gmail.com",
+      "phones": [
+        {
+          "id": 1,
+          "number": "+556292731196"
+        }
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "address": "condominio teste"
+        }
+      ],
+      "id": 5
     }
   ]
 }

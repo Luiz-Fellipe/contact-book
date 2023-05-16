@@ -9,7 +9,7 @@ export interface IPhoneNumbers {
 }
 
 export interface IContact {
-  id: number;
+  id: number | string;
   name: string;
   email: string;
   addresses: IAddress[];

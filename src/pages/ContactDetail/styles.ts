@@ -25,6 +25,10 @@ export const Header = styled.div`
 
   @media ${({ theme }) => theme.device.sm} {
     flex-direction: row;
+
+    > .header-info {
+      align-items: flex-start;
+    }
   }
 `;
 

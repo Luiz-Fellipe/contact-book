@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'redux/store';
+import { useNavigate } from 'react-router-dom';
 
 // REDUX
 import {
@@ -16,6 +17,7 @@ import useDebounce from 'hooks/useDebounce';
 import { IContactsStates } from 'redux/reducers/Contacts/types';
 
 export function usePhoneBook() {
+  const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState('');
 
   const debouncedSearchValue = useDebounce<string>(searchValue, 500);
@@ -59,6 +61,8 @@ export function usePhoneBook() {
     setOpenModalEditContact,
     openAlertDeleteContact,
     setOpenAlertDeleteContact,
+
+    navigate,
     searchValue,
     setSearchValue,
     debouncedSearchValue,

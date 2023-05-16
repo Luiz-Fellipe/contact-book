@@ -20,11 +20,8 @@ export const Wrapper = styled.div`
     max-width: 40%;
   }
 
-  .contact-item-actions {
+  .button-import-contact {
     margin-left: auto;
-
-    display: flex;
-    gap: ${({ theme }) => theme.space[4]};
   }
 
   @media ${({ theme }) => theme.device.md} {

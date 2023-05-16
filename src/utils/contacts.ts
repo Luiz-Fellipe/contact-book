@@ -29,12 +29,9 @@ function groupContactsByFirstLetter(contacts: IContact[]): {
  * @returns The initials from the name.
  */
 function getContactsInitials(name: string): string {
-  const splittedName = name.split(' ');
-
-  const firstInitial = splittedName[0]?.charAt(0) || '';
-  const secondInitial = splittedName[1]?.charAt(0) || '';
-
-  return firstInitial + secondInitial;
+  const words = name.split(/[^\w']+/, 2);
+  const initials = words.map((word) => word.charAt(0).toUpperCase());
+  return initials.join('');
 }
 
 export { groupContactsByFirstLetter, getContactsInitials };

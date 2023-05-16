@@ -1,9 +1,11 @@
+import { useMemo } from 'react';
+
 // COMPONENTS
 import { Text } from 'components/texts';
 import { ContactCard } from './components/ContactCard';
 
-// HOOKS
-import { useContactList } from './hooks/useContactList';
+// UTILS
+import { groupContactsByFirstLetter } from 'utils/contacts';
 
 // TYPES
 import { IContact } from 'types/contacts';
@@ -12,7 +14,10 @@ import { IContact } from 'types/contacts';
 import { ContactGroup, Wrapper } from './styles';
 
 export const ContactList = ({ contacts }: { contacts: IContact[] }) => {
-  const { groupedContacts } = useContactList({ contacts });
+  const groupedContacts = useMemo(
+    () => groupContactsByFirstLetter(contacts),
+    [contacts]
+  );
 
   return (
     <Wrapper>

@@ -14,7 +14,12 @@ export function useModalAddContact() {
       setAddingContact(true);
       await addContactMutation.mutateAsync({ contact });
 
-      dispatch(onOpenModalAddContact(false));
+      dispatch(
+        onOpenModalAddContact({
+          value: false,
+          defaultData: undefined,
+        })
+      );
       setAddingContact(false);
     } catch (err) {
       setAddingContact(false);

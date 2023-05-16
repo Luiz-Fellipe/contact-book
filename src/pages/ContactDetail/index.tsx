@@ -61,7 +61,7 @@ export const ContactDetail = () => {
           <Content>
             <GridContainer>
               {contact.data.phones.map((phone, index) => (
-                <InfoGroup>
+                <InfoGroup key={phone.id}>
                   <Text $fontSize="lg" $fontWeight="medium">
                     <h5>Telefone {index + 1}:</h5>
                   </Text>
@@ -78,7 +78,7 @@ export const ContactDetail = () => {
             </GridContainer>
             <GridContainer>
               {contact.data.addresses.map((address, index) => (
-                <InfoGroup>
+                <InfoGroup key={address.id}>
                   <Text $fontSize="lg" $fontWeight="medium">
                     <h5>Endereço {index + 1}:</h5>
                   </Text>

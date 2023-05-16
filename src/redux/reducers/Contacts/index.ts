@@ -5,7 +5,10 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { IContactsStates } from './types';
 
 const initialState: IContactsStates = {
-  openModalAddContact: false,
+  openModalAddContact: {
+    value: false,
+    defaultData: undefined,
+  },
 
   openModalEditContact: {
     value: false,
