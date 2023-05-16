@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: ${({ theme }) => theme.space[16]};
 
   margin-top: ${({ theme }) => theme.space[24]};
@@ -19,11 +18,20 @@ export const Header = styled.div`
 
   border-bottom: 1px solid ${({ theme }) => theme.pallet.gray.G100};
 
-  /* @media ${({ theme }) => theme.device.md} {
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: ${({ theme }) => theme.space[16]};
+  }
+
+  > button {
+    margin-left: auto;
+  }
+
+  @media ${({ theme }) => theme.device.md} {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  } */
+    align-items: center;
+  }
 `;
 
 export const Content = styled.div`

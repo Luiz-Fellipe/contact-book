@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useGoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin, googleLogout } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 
 export function useGoogleCredentials() {
@@ -17,9 +17,17 @@ export function useGoogleCredentials() {
     onError: (error) => console.log('Login Failed:', error),
   });
 
+  const logout = () => {
+    googleLogout();
+    setUserCredentials({
+      access_token: '',
+    });
+  };
+
   return {
     userCredentials,
     login,
+    logout,
     navigate,
   };
 }

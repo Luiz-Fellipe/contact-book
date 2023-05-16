@@ -24,7 +24,7 @@ import { GoogleContactList } from './components/GoogleContactList';
 import { Content, Header, Wrapper } from './styles';
 
 export const GoogleContacts: React.FC = () => {
-  const { userCredentials, login, navigate } = useGoogleCredentials();
+  const { userCredentials, login, logout, navigate } = useGoogleCredentials();
 
   const {
     contacts,
@@ -49,22 +49,28 @@ export const GoogleContacts: React.FC = () => {
         onClick={() => navigate('/')}
       />
       <Header>
-        <Text $fontSize="xl" color="black" $fontWeight="medium">
-          <h3>Google Contatos</h3>
-        </Text>
-        <Text
-          $fontSize="sm"
-          color="gray"
-          $fontWeight="regular"
-          $withoutTextEllipses
-        >
-          <p>
-            Visualize e importe os seus contatos do{' '}
-            <a href="https://contacts.google.com/" target="_blank">
-              Google Contatos
-            </a>
-          </p>
-        </Text>
+        <div>
+          <Text $fontSize="xl" color="black" $fontWeight="medium">
+            <h3>Google Contatos</h3>
+          </Text>
+          <Text
+            $fontSize="sm"
+            color="gray"
+            $fontWeight="regular"
+            $withoutTextEllipses
+          >
+            <p>
+              Visualize e importe os seus contatos do{' '}
+              <a href="https://contacts.google.com/" target="_blank">
+                Google Contatos
+              </a>
+            </p>
+          </Text>
+        </div>
+
+        {userCredentials.access_token && (
+          <Button text="Logout" $fontSize="sm" onClick={() => logout()} />
+        )}
       </Header>
       <Content>
         {userCredentials?.access_token && isLoading && (
