@@ -31,7 +31,7 @@
         }
       ],
       "email": "arthur@gmail.com",
-      "name": "arthur",
+      "name": "Arthur",
       "id": 2
     },
     {
@@ -54,6 +54,23 @@
       "email": "bruno@gmail.com",
       "name": "Bruno Rezende",
       "id": 3
+    },
+    {
+      "addresses": [
+        {
+          "id": 1,
+          "address": "cidade jardim"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+556292731196",
+          "id": 1
+        }
+      ],
+      "email": "barbara@gmail.com",
+      "name": "Barbara 💕",
+      "id": 4
     }
   ]
 }

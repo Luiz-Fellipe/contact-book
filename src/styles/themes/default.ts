@@ -23,6 +23,7 @@ export const defaultTheme = {
       G50: '#F0F2F7',
       G100: '#C3CACF',
       G200: '#A6B1C3',
+      G600: '#8F95B2',
     },
     feedback: {
       success: '#41BD00',

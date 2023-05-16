@@ -11,7 +11,7 @@ const variants = {
   primary: defaultTheme.pallet.primary,
   secondary: defaultTheme.pallet.secondary,
   black: defaultTheme.pallet.black.B500,
-  gray: defaultTheme.pallet.gray.G200,
+  gray: defaultTheme.pallet.gray.G600,
   danger: defaultTheme.pallet.feedback.danger,
 };
 
@@ -44,4 +44,15 @@ export const StyledText = styled(Slot)<ITextProps>`
       text-overflow: ellipsis;
       white-space: nowrap;
     `};
+
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.pallet.secondary};
+  }
+
+  > a {
+    cursor: pointer;
+    &:focus {
+      outline: 2px solid ${({ theme }) => theme.pallet.secondary};
+    }
+  }
 `;

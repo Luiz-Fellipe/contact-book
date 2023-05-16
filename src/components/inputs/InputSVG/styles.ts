@@ -31,12 +31,12 @@ export const RowInput = styled.div<IRowProps>`
     transform: translateY(-50%);
     font-size: ${({ theme }) => theme.fontSize.sm};
     color: ${({ theme, $withError }) =>
-      $withError ? theme.pallet.feedback.danger : theme.pallet.gray.G200};
+      $withError ? theme.pallet.feedback.danger : theme.pallet.gray.G600};
     pointer-events: none;
     transition: all 100ms;
   }
   > svg.hover {
-    color: ${({ theme }) => theme.pallet.gray.G100};
+    color: ${({ theme }) => theme.pallet.gray.G200};
   }
   > svg.focus {
     color: ${({ theme }) => theme.pallet.secondary};

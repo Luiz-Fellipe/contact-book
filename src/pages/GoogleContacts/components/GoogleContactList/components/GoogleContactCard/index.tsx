@@ -30,7 +30,7 @@ export const GoogleContactCard = ({
           <span>{name}</span>
         </Text>
         <Text $fontSize="xs" $fontWeight="regular" color="gray">
-          <span>{phones[0].number}</span>
+          <a href={`tel:${phones[0].number}`}>{phones[0].number}</a>
         </Text>
       </div>
 

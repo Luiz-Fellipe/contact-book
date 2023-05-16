@@ -62,7 +62,7 @@ const PhoneBook = () => {
       <Header>
         <div className="header-content-left">
           <Text $fontSize="xl" color="black" $fontWeight="medium">
-            <h3>Lista Telefônica</h3>
+            <h2>Lista Telefônica</h2>
           </Text>
           <Text $fontSize="sm" color="gray" $fontWeight="regular">
             <p>Listagem de todos os seus contatos</p>
