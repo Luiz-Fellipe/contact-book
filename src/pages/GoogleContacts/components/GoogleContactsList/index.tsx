@@ -1,7 +1,7 @@
 // COMPONENTS
 import { Text } from 'components/texts';
 import { GoogleContactCard } from './components/GoogleContactCard';
-import { ModalAddContact } from 'pages/PhoneBook/components/ModalAddContact';
+import { ModalAddContact } from 'pages/ContactBook/components/ModalAddContact';
 
 // HOOKS
 import { useGoogleContactsList } from './hooks/useGoogleContactsList';
@@ -12,7 +12,7 @@ import { IGoogleContactProps } from './types';
 // STYLES
 import { ContactGroup, Wrapper } from './styles';
 
-export const GoogleContactList = ({ googleContacts }: IGoogleContactProps) => {
+export const GoogleContactsList = ({ googleContacts }: IGoogleContactProps) => {
   const { groupedContacts, openModalAddContact, setOpenModalAddContact } =
     useGoogleContactsList({ googleContacts });
 

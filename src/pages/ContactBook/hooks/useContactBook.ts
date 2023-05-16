@@ -16,7 +16,7 @@ import useDebounce from 'hooks/useDebounce';
 // TYPES
 import { IContactsStates } from 'redux/reducers/Contacts/types';
 
-export function usePhoneBook() {
+export function useContactBook() {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState('');
 

@@ -4,7 +4,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { DefaultLayout } from '_layouts/DefaultLayout';
 
 // PAGES
-import PhoneBook from 'pages/PhoneBook';
+import ContactBook from 'pages/ContactBook';
 import { ContactDetail } from 'pages/ContactDetail';
 import { GoogleContacts } from 'pages/GoogleContacts';
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <PhoneBook />,
+        element: <ContactBook />,
       },
       {
         path: 'contact/:contactId',

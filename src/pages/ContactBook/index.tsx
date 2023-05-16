@@ -11,7 +11,7 @@ import {
 import { Text } from 'components/texts';
 import { InputSVG } from 'components/inputs/InputSVG';
 import { Button } from 'components/buttons';
-import { ContactList } from './components/ContactList';
+import { ContactsList } from './components/ContactsList';
 import { LoadingBox } from 'components/loadings';
 import { FeedbackBox } from 'components/feedbacks';
 import { ModalAddContact } from './components/ModalAddContact';
@@ -22,12 +22,12 @@ import { AlertDeleteContact } from './components/AlertDeleteContact';
 import { useGetContactsInfinityQuery } from 'services/queries/contacts/useGetContactsQuery';
 
 // HOOKS
-import { usePhoneBook } from './hooks/usePhoneBook';
+import { useContactBook } from './hooks/useContactBook';
 
 // STYLES
 import { Wrapper, Header, Content } from './styles';
 
-const PhoneBook = () => {
+const ContactBook = () => {
   const {
     openModalAddContact,
     setOpenModalAddContact,
@@ -40,7 +40,7 @@ const PhoneBook = () => {
     searchValue,
     setSearchValue,
     debouncedSearchValue,
-  } = usePhoneBook();
+  } = useContactBook();
 
   const {
     contacts,
@@ -62,7 +62,7 @@ const PhoneBook = () => {
       <Header>
         <div className="header-content-left">
           <Text $fontSize="xl" color="black" $fontWeight="medium">
-            <h2>Lista Telefônica</h2>
+            <h2>Agenda de Contatos</h2>
           </Text>
           <Text $fontSize="sm" color="gray" $fontWeight="regular">
             <p>Listagem de todos os seus contatos</p>
@@ -98,7 +98,7 @@ const PhoneBook = () => {
       <Content>
         {isLoading && <LoadingBox $iconSize="xxxxl" />}
 
-        {isSuccess && <ContactList contacts={contacts} />}
+        {isSuccess && <ContactsList contacts={contacts} />}
 
         {hasNextPage && isSuccess && (
           <Button
@@ -164,4 +164,4 @@ const PhoneBook = () => {
   );
 };
 
-export default PhoneBook;
+export default ContactBook;

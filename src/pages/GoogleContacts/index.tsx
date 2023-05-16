@@ -18,7 +18,7 @@ import { Text } from 'components/texts';
 import { Button } from 'components/buttons';
 import { LoadingBox } from 'components/loadings';
 import { FeedbackBox } from 'components/feedbacks';
-import { GoogleContactList } from './components/GoogleContactList';
+import { GoogleContactsList } from './components/GoogleContactsList';
 
 // STYLES
 import { Content, Header, Wrapper } from './styles';
@@ -84,7 +84,7 @@ export const GoogleContacts: React.FC = () => {
         )}
 
         {userCredentials?.access_token && isSuccess && contacts.length > 0 && (
-          <GoogleContactList googleContacts={contacts} />
+          <GoogleContactsList googleContacts={contacts} />
         )}
 
         {hasNextPage && isSuccess && (

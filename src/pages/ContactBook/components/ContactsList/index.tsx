@@ -13,7 +13,7 @@ import { IContact } from 'types/contacts';
 // STYLES
 import { ContactGroup, Wrapper } from './styles';
 
-export const ContactList = ({ contacts }: { contacts: IContact[] }) => {
+export const ContactsList = ({ contacts }: { contacts: IContact[] }) => {
   const groupedContacts = useMemo(
     () => groupContactsByFirstLetter(contacts),
     [contacts]
