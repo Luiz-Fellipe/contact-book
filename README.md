@@ -44,7 +44,8 @@ e foi realizado como parte do processo seletivo da empresa [VExpenses](https://v
       - `npm run start` (para iniciar a lista de contatos vazia)
       - `npm run start-big` (para iniciar a lista de contatos ja populada)
 
-Uma mensagem deve aparecer em seu console com a URL da API
+Uma mensagem deve aparecer em seu console com a URL da API.
+
 Pronto! Sua API está rodando com sucesso !
 
 ⚠️ **ATENÇÃO:** A API deve estar rodando para os próximos passos funcionarem corretamente.
