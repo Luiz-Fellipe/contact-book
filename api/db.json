@@ -6,7 +6,7 @@
       "phones": [
         {
           "id": 1,
-          "number": "62995767758"
+          "number": "+5562995767758"
         }
       ],
       "addresses": [
@@ -16,6 +16,44 @@
         }
       ],
       "id": 1
+    },
+    {
+      "addresses": [
+        {
+          "id": 1,
+          "address": "teste do pedido"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+556285161360",
+          "id": 1
+        }
+      ],
+      "email": "arthur@gmail.com",
+      "name": "arthur",
+      "id": 2
+    },
+    {
+      "addresses": [
+        {
+          "id": 1,
+          "address": "endereço top"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+556283252067",
+          "id": 1
+        },
+        {
+          "number": "+5562984883146",
+          "id": 2
+        }
+      ],
+      "email": "bruno@gmail.com",
+      "name": "Bruno Rezende",
+      "id": 3
     }
   ]
 }

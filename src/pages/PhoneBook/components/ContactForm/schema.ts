@@ -16,6 +16,10 @@ export const contactSchema = object({
         id: number().required(),
         number: string()
           .required('O campo de telefone é obrigatório')
+          .transform((value) => {
+            const digitsOnly = value.replace(/[^+\d]/g, '');
+            return digitsOnly;
+          })
           .matches(phoneRegExp, 'Número de telefone inválido'),
       })
     )
