@@ -1,7 +1,6 @@
-# 🚀 Vexpenses Challenge - Agenda De Contatos
+# 🚀 Agenda De Contatos
 
-Este projeto consiste em uma agenda de contatos web onde o usuário pode incluir seus contatos manualmente ou importa-los do [Google Contacts](https://contacts.google.com/)
-e foi realizado como parte do processo seletivo da empresa [VExpenses](https://vexpenses.com.br).
+Este projeto consiste em uma agenda de contatos web onde o usuário pode incluir seus contatos manualmente ou importa-los do [Google Contacts](https://contacts.google.com/).
 
 ## Tecnologias
 
